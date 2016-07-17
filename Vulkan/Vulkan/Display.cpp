@@ -1,5 +1,7 @@
 #include "Display.h"
 
+using namespace NP16;
+
 Display::Display()
 {
 }

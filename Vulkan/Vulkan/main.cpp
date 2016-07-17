@@ -1,11 +1,18 @@
 #include "Display.h"
+#include "VulkanLoader.h"
 
+using namespace NP16;
 
 int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine, int nCmdShow)
 {
 	Display display;
 	display.Create(hInstance, hPrevInstance, lpCmdLine,
 		nCmdShow, 1024, 768, 100, 100, L"Test Vulkan", L"VulkanClass");
+
+	VulkanLoader vulkanLoader;
+	vulkanLoader.Win32_LoadVulkan();
+	vulkanLoader.CreateInstance();
+	vulkanLoader.ValidationLayers();
 
 	MSG msg;
 	bool done = false;
