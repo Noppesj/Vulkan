@@ -12,7 +12,7 @@ int CALLBACK WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLi
 	VulkanLoader vulkanLoader;
 	vulkanLoader.Win32_LoadVulkan();
 	vulkanLoader.CreateInstance();
-	vulkanLoader.ValidationLayers();
+	vulkanLoader.ReportExtensions();
 
 	MSG msg;
 	bool done = false;
